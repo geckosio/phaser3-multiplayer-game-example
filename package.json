@@ -1,0 +1,39 @@
+{
+  "name": "phaser3-multiplayer-example-with-geckos.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all --parallel parcel:serve server:serve",
+    "build": "npm run parcel:build",
+    "start": "node server/server.js",
+    "pm2:start": "NODE_ENV=production pm2 start server/server.js --max-memory-restart 240M",
+    "parcel:build": "parcel build index.html",
+    "parcel:serve": "parcel serve index.html",
+    "server:serve": "nodemon server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "axios": "^0.18.0",
+    "canvas": "^2.4.1",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "geckos.io": "0.0.1",
+    "jsdom": "^14.0.0",
+    "phaser": "3.16.2"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "parcel": "^1.12.3",
+    "parcel-plugin-static-files-copy": "^2.0.0"
+  },
+  "staticFiles": {
+    "staticPath": [
+      "client/assets"
+    ]
+  }
+}
