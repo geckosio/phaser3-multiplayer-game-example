@@ -1,7 +1,7 @@
 /// <reference path="../../phaser.d.ts" />
 
 import { Scene } from 'phaser'
-import geckos from 'geckos.io/lib/client'
+import geckos from '@geckos.io/client'
 
 export default class BootScene extends Scene {
   constructor() {

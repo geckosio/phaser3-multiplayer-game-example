@@ -1,5 +1,5 @@
-const geckos = require('geckos.io').server
-const iceServers = require('geckos.io').iceServers
+const geckos = require('@geckos.io/server').default
+const { iceServers } = require('@geckos.io/server')
 
 const { Scene } = require('phaser')
 const Player = require('./components/player')
