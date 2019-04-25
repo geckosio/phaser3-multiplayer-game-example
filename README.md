@@ -14,6 +14,6 @@ $ cd phaser3-multiplayer-game
 # Install dependencies
 $ npm install
 
-# Start the local development server (on port 3000)
+# Start the local development server (on port 1444)
 $ npm run dev
 ```

@@ -110,7 +110,7 @@ export default class GameScene extends Scene {
 
     try {
       let res = await axios.get(
-        `${location.protocol}//${location.hostname}:3000/getState`
+        `${location.protocol}//${location.hostname}:1444/getState`
       )
 
       let parsedUpdates = parseUpdates(res.data.state)

@@ -6,7 +6,7 @@ const PhaserGame = require('./game/game')
 
 const app = express()
 const game = new PhaserGame()
-const port = 3000
+const port = 1444
 
 app.use(cors())
 app.use(compression())
