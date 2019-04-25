@@ -95,7 +95,9 @@ class GameScene extends Scene {
       let y = Math.abs(player.y !== player.prevY) > 0.5
       let dead = player.dead != player.prevDead
       if (x || y || dead) {
-        updates += this.prepareToSync(player)
+        if (dead || !player.dead) {
+          updates += this.prepareToSync(player)
+        }
       }
       player.postUpdate()
     })
