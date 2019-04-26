@@ -17,8 +17,8 @@
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
-    "@geckos.io/client": "0.0.2",
-    "@geckos.io/server": "0.0.2",
+    "@geckos.io/client": "0.0.4",
+    "@geckos.io/server": "0.0.4",
     "axios": "^0.18.0",
     "canvas": "^2.4.1",
     "compression": "^1.7.4",
