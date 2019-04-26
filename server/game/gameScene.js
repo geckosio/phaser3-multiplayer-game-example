@@ -8,10 +8,13 @@ class GameScene extends Scene {
   constructor() {
     super({ key: 'GameScene' })
     this.playerId = 0
+  }
+
+  init() {
     this.io = geckos({
       iceServers: process.env.NODE_ENV === 'production' ? iceServers : []
     })
-    this.io.listen()
+    this.io.addServer(this.game.server)
   }
 
   getId() {

@@ -1,11 +1,13 @@
 const express = require('express')
+const http = require('http')
 const cors = require('cors')
 const compression = require('compression')
 const path = require('path')
 const PhaserGame = require('./game/game')
-
 const app = express()
-const game = new PhaserGame()
+const server = http.createServer(app)
+
+const game = new PhaserGame(server)
 const port = 1444
 
 app.use(cors())
@@ -26,6 +28,6 @@ app.get('/getState', (req, res) => {
   }
 })
 
-app.listen(port, () => {
+server.listen(port, () => {
   console.log('Express is listening on http://localhost:' + port)
 })

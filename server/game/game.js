@@ -2,8 +2,9 @@ require('../mockBrowser')
 const config = require('./config')
 
 class PhaserGame extends Phaser.Game {
-  constructor() {
+  constructor(server) {
     super(config)
+    this.server = server
   }
 }
 
