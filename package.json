@@ -1,6 +1,6 @@
 {
   "name": "phaser3-multiplayer-example-with-geckos.io",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,13 +18,12 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
     "@geckos.io/client": "0.0.6",
+    "@geckos.io/phaser-on-nodejs": "^1.0.0",
     "@geckos.io/server": "0.0.6",
     "axios": "^0.18.0",
-    "canvas": "^2.4.1",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "jsdom": "^14.0.0",
     "phaser": "3.16.2"
   },
   "devDependencies": {

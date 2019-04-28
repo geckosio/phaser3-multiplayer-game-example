@@ -1,3 +1,5 @@
+require('@geckos.io/phaser-on-nodejs')
+
 const Phaser = require('phaser')
 const GameScene = require('./gameScene')
 
