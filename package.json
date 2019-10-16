@@ -10,6 +10,7 @@
     "pm2:start": "NODE_ENV=production pm2 start server/server.js --max-memory-restart 240M",
     "parcel:build": "parcel build index.html --no-source-maps",
     "parcel:serve": "parcel serve index.html --no-source-maps",
+    "server:serve": "nodemon --delay 500ms server/server.js"
   },
   "keywords": [],
   "author": "",
