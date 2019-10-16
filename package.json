@@ -8,9 +8,8 @@
     "build": "npm run parcel:build",
     "start": "node server/server.js",
     "pm2:start": "NODE_ENV=production pm2 start server/server.js --max-memory-restart 240M",
-    "parcel:build": "parcel build index.html",
-    "parcel:serve": "parcel serve index.html",
-    "server:serve": "nodemon server/server.js"
+    "parcel:build": "parcel build index.html --no-source-maps",
+    "parcel:serve": "parcel serve index.html --no-source-maps",
   },
   "keywords": [],
   "author": "",
