@@ -95,7 +95,7 @@ class GameScene extends Scene {
     let updates = ''
     this.playersGroup.children.iterate(player => {
       let x = Math.abs(player.x - player.prevX) > 0.5
-      let y = Math.abs(player.y !== player.prevY) > 0.5
+      let y = Math.abs(player.y - player.prevY) > 0.5
       let dead = player.dead != player.prevDead
       if (x || y || dead) {
         if (dead || !player.dead) {
