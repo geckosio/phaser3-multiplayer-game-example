@@ -16,7 +16,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@babel/polyfill": "^7.6.0",
+    "@babel/polyfill": "^7.7.0",
     "@geckos.io/client": "^1.1.8",
     "@geckos.io/phaser-on-nodejs": "^1.0.3",
     "@geckos.io/server": "^1.1.8",
