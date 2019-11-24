@@ -7,6 +7,7 @@
     "dev": "npm-run-all --parallel parcel:serve server:serve",
     "build": "npm run parcel:build",
     "start": "NODE_ENV=production node server/server.js",
+    "test": "node test/test.js",
     "pm2:start": "NODE_ENV=production pm2 start server/server.js --max-memory-restart 240M",
     "parcel:build": "parcel build index.html --no-source-maps",
     "parcel:serve": "parcel serve index.html --no-source-maps",
@@ -29,7 +30,8 @@
   "devDependencies": {
     "npm-run-all": "^4.1.5",
     "parcel": "^1.12.4",
-    "parcel-plugin-static-files-copy": "^2.2.1"
+    "parcel-plugin-static-files-copy": "^2.2.1",
+    "puppeteer": "^2.0.0"
   },
   "staticFiles": {
     "staticPath": [
