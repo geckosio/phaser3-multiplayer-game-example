@@ -18,9 +18,9 @@
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
-    "@geckos.io/client": "^1.3.0",
+    "@geckos.io/client": "^1.4.0",
     "@geckos.io/phaser-on-nodejs": "^1.0.4",
-    "@geckos.io/server": "^1.3.0",
+    "@geckos.io/server": "^1.4.0",
     "axios": "^0.18.1",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
