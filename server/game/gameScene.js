@@ -12,7 +12,7 @@ class GameScene extends Scene {
 
   init() {
     this.io = geckos({
-      iceServers: process.env.NODE_ENV === 'production' ? iceServers : []
+      iceServers: process.env.NODE_ENV === 'production' ? iceServers : [],
     })
     this.io.addServer(this.game.server)
   }
@@ -29,7 +29,7 @@ class GameScene extends Scene {
 
   getState() {
     let state = ''
-    this.playersGroup.children.iterate(player => {
+    this.playersGroup.children.iterate((player) => {
       state += this.prepareToSync(player)
     })
     return state
@@ -52,10 +52,10 @@ class GameScene extends Scene {
       }
     }
 
-    this.io.onConnection(channel => {
+    this.io.onConnection((channel) => {
       channel.onDisconnect(() => {
         console.log('Disconnect user ' + channel.id)
-        this.playersGroup.children.each(player => {
+        this.playersGroup.children.each((player) => {
           if (player.playerId === channel.playerId) {
             player.kill()
           }
@@ -70,20 +70,26 @@ class GameScene extends Scene {
         channel.emit('getId', channel.playerId.toString(36))
       })
 
-      channel.on('playerMove', data => {
-        this.playersGroup.children.iterate(player => {
+      channel.on('playerMove', (data) => {
+        this.playersGroup.children.iterate((player) => {
           if (player.playerId === channel.playerId) {
             player.setMove(data)
           }
         })
       })
 
-      channel.on('addPlayer', data => {
+      channel.on('addPlayer', (data) => {
         let dead = this.playersGroup.getFirstDead()
         if (dead) {
           dead.revive(channel.playerId, false)
         } else {
-          this.playersGroup.add(new Player(this, channel.playerId))
+          this.playersGroup.add(
+            new Player(
+              this,
+              channel.playerId,
+              Phaser.Math.RND.integerInRange(100, 700)
+            )
+          )
         }
       })
 
@@ -93,7 +99,7 @@ class GameScene extends Scene {
 
   update() {
     let updates = ''
-    this.playersGroup.children.iterate(player => {
+    this.playersGroup.children.iterate((player) => {
       let x = Math.abs(player.x - player.prevX) > 0.5
       let y = Math.abs(player.y - player.prevY) > 0.5
       let dead = player.dead != player.prevDead
