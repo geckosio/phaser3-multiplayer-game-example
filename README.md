@@ -18,4 +18,7 @@ $ npm install
 
 # Start the local development server (on port 1444)
 $ npm run dev
+
+# Add bots to the game (via puppeteer) to test it
+$ npm run test
 ```
