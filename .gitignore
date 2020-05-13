@@ -2,3 +2,4 @@
 /.cache
 /.vscode
 /dist
+package-lock.json
