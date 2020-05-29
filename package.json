@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev",
     "dev": "npm-run-all --parallel parcel:serve server:serve",
     "build": "npm run parcel:build",
-    "start": "NODE_ENV=production node server/server.js",
+    "play": "NODE_ENV=production node server/server.js",
     "test": "node test/test.js",
     "pm2:start": "NODE_ENV=production pm2 start server/server.js --max-memory-restart 240M",
     "parcel:build": "parcel build index.html --no-source-maps",

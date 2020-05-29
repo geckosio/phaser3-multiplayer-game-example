@@ -17,7 +17,7 @@ $ cd phaser3-multiplayer-game
 $ npm install
 
 # Start the local development server (on port 1444)
-$ npm run dev
+$ npm run start
 
 # Add bots to the game (via puppeteer) to test it
 $ npm run test
