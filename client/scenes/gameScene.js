@@ -1,5 +1,3 @@
-/// <reference path="../../phaser.d.ts" />
-
 import { Scene } from 'phaser'
 import axios from 'axios'
 import Player from '../components/player'

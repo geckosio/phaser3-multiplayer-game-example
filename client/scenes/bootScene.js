@@ -1,5 +1,3 @@
-/// <reference path="../../phaser.d.ts" />
-
 import { Scene } from 'phaser'
 import geckos from '@geckos.io/client'
 
