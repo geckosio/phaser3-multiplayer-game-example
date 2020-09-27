@@ -56,7 +56,8 @@ export default class GameScene extends Scene {
       let u2 = []
 
       u.forEach((el, i) => {
-        if (i % 4 === 0) {
+        // with the random string, we now get 5 values
+        if (i % 5 === 0) {
           u2.push({
             playerId: u[i + 0],
             x: parseInt(u[i + 1], 36),

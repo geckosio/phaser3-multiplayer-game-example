@@ -28,6 +28,5 @@ app.get('/getState', (req, res) => {
   }
 })
 
-server.listen(port, () => {
-  console.log('Express is listening on http://localhost:' + port)
-})
+// make the server available in the local network
+server.listen(port, '0.0.0.0')

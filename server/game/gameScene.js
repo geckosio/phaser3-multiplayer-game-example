@@ -21,10 +21,21 @@ class GameScene extends Scene {
     return this.playerId++
   }
 
+  // create a ransom string to simulate the sending of 100bytes
+  randomString(length) {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  }
+
   prepareToSync(player) {
     return `${player.playerId},${Math.round(player.x).toString(
       36
-    )},${Math.round(player.y).toString(36)},${player.dead === true ? 1 : 0},`
+    )},${Math.round(player.y).toString(36)},${player.dead === true ? 1 : 0},${this.randomString(90)},`
   }
 
   getState() {
@@ -103,13 +114,14 @@ class GameScene extends Scene {
       let x = Math.abs(player.x - player.prevX) > 0.5
       let y = Math.abs(player.y - player.prevY) > 0.5
       let dead = player.dead != player.prevDead
-      if (x || y || dead) {
-        if (dead || !player.dead) {
-          updates += this.prepareToSync(player)
-        }
+      // if (x || y || dead) {
+      if (dead || !player.dead) {
+        updates += this.prepareToSync(player)
       }
+      // }
       player.postUpdate()
     })
+
 
     if (updates.length > 0) {
       this.io.room().emit('updateObjects', [updates])
