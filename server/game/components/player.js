@@ -55,10 +55,10 @@ class Player extends Phaser.Physics.Arcade.Sprite {
     let int = parseInt(data, 36)
 
     let move = {
-      left: int === 1 || int === 5 ? true : false,
-      right: int === 2 || int === 6 ? true : false,
-      up: int === 4 || int === 6 || int === 5 ? true : false,
-      none: int === 8 ? true : false
+      left: int === 1 || int === 5,
+      right: int === 2 || int === 6,
+      up: int === 4 || int === 6 || int === 5,
+      none: int === 8
     }
 
     this.move = move
