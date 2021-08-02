@@ -1,6 +1,6 @@
 /// <reference path="../phaser.d.ts" />
 
-import "core-js/stable";
+import 'core-js/stable'
 
 import Phaser, { Game } from 'phaser'
 import BootScene from './scenes/bootScene'

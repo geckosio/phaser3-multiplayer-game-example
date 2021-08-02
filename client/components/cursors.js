@@ -26,12 +26,7 @@ export default class Cursors {
       move.none = false
     }
 
-    if (
-      move.left ||
-      move.right ||
-      move.up ||
-      move.none !== this.prevNoMovement
-    ) {
+    if (move.left || move.right || move.up || move.none !== this.prevNoMovement) {
       let total = 0
       if (move.left) total += 1
       if (move.right) total += 2

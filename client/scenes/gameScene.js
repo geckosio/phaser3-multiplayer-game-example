@@ -17,12 +17,12 @@ export default class GameScene extends Scene {
   }
 
   preload() {
-    this.load.image('controls', 'controls.png')
-    this.load.spritesheet('fullscreen', 'fullscreen.png', {
+    this.load.image('controls', 'assets/controls.png')
+    this.load.spritesheet('fullscreen', 'assets/fullscreen.png', {
       frameWidth: 64,
       frameHeight: 64
     })
-    this.load.spritesheet('player', 'player.png', {
+    this.load.spritesheet('player', 'assets/player.png', {
       frameWidth: 32,
       frameHeight: 48
     })
@@ -35,12 +35,7 @@ export default class GameScene extends Scene {
     FullscreenButton(this)
 
     let addDummyDude = this.add
-      .text(
-        this.cameras.main.width / 2,
-        this.cameras.main.height / 2 - 100,
-        'CLICK ME',
-        { fontSize: 48 }
-      )
+      .text(this.cameras.main.width / 2, this.cameras.main.height / 2 - 100, 'CLICK ME', { fontSize: 48 })
       .setOrigin(0.5)
     addDummyDude.setInteractive().on('pointerdown', () => {
       this.channel.emit('addDummy')
@@ -107,9 +102,7 @@ export default class GameScene extends Scene {
     })
 
     try {
-      let res = await axios.get(
-        `${location.protocol}//${location.hostname}:1444/getState`
-      )
+      let res = await axios.get(`${location.protocol}//${location.hostname}:1444/getState`)
 
       let parsedUpdates = parseUpdates(res.data.state)
       updatesHandler(parsedUpdates)

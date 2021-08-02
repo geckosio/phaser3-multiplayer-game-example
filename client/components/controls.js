@@ -27,12 +27,8 @@ export default class Controls {
         }
       }
     }
-    scene.input.on('gameobjectdown', (pointer, gameObject) =>
-      detectPointer(gameObject, true)
-    )
-    scene.input.on('gameobjectup', (pointer, gameObject) =>
-      detectPointer(gameObject, false)
-    )
+    scene.input.on('gameobjectdown', (pointer, gameObject) => detectPointer(gameObject, true))
+    scene.input.on('gameobjectup', (pointer, gameObject) => detectPointer(gameObject, false))
 
     let left = new Control(scene, 0, 0, 'left').setRotation(-0.5 * Math.PI)
     let right = new Control(scene, 0, 0, 'right').setRotation(0.5 * Math.PI)
@@ -92,10 +88,7 @@ class Control extends Phaser.GameObjects.Image {
 
     this.btn = btn
 
-    this.setInteractive()
-      .setScrollFactor(0)
-      .setAlpha(0.2)
-      .setDepth(2)
+    this.setInteractive().setScrollFactor(0).setAlpha(0.2).setDepth(2)
 
     // if (!scene.sys.game.device.input.touch) this.setAlpha(0)
   }

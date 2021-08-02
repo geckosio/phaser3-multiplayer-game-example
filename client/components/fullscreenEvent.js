@@ -10,11 +10,7 @@ const FullScreenEvent = callback => {
   }
   var vendors = ['webkit', 'moz', 'ms', '']
   vendors.forEach(prefix => {
-    document.addEventListener(
-      prefix + 'fullscreenchange',
-      fullScreenChange,
-      false
-    )
+    document.addEventListener(prefix + 'fullscreenchange', fullScreenChange, false)
   })
   document.addEventListener('MSFullscreenChange', fullScreenChange, false)
 }
