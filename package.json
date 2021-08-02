@@ -28,7 +28,7 @@
     "core-js": "^3.16.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "phaser": "~3.23.0"
+    "phaser": "^3.55.2"
   },
   "devDependencies": {
     "@yandeu/prettier-config": "^0.0.2",
