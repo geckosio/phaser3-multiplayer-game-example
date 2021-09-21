@@ -1,4 +1,4 @@
-class Player extends Phaser.Physics.Arcade.Sprite {
+export class Player extends Phaser.Physics.Arcade.Sprite {
   constructor(scene, playerId, x = 200, y = 200, dummy = false) {
     super(scene, x, y, '')
     scene.add.existing(this)
@@ -78,5 +78,3 @@ class Player extends Phaser.Physics.Arcade.Sprite {
     this.prevDead = this.dead
   }
 }
-
-module.exports = Player

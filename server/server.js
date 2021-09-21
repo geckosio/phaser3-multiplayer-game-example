@@ -1,9 +1,15 @@
-const express = require('express')
-const http = require('http')
-const cors = require('cors')
-const compression = require('compression')
-const path = require('path')
-const PhaserGame = require('./game/game')
+import express from 'express'
+import http from 'http'
+import cors from 'cors'
+import compression from 'compression'
+import path from 'path'
+import { PhaserGame } from './game/game.js'
+
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
 const app = express()
 const server = http.createServer(app)
 

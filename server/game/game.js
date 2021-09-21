@@ -1,10 +1,8 @@
-const config = require('./config')
+import { config } from './config.js'
 
-class PhaserGame extends Phaser.Game {
+export class PhaserGame extends Phaser.Game {
   constructor(server) {
     super(config)
     this.server = server
   }
 }
-
-module.exports = PhaserGame

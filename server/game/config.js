@@ -1,9 +1,9 @@
-require('@geckos.io/phaser-on-nodejs')
+import '@geckos.io/phaser-on-nodejs'
 
-const Phaser = require('phaser')
-const GameScene = require('./gameScene')
+import Phaser from 'phaser'
+import { GameScene } from './gameScene.js'
 
-const config = {
+export const config = {
   type: Phaser.HEADLESS,
   parent: 'phaser-game',
   width: 896,
@@ -18,4 +18,3 @@ const config = {
     }
   }
 }
-module.exports = config

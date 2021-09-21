@@ -7,7 +7,7 @@ const destDir = join(resolve(), 'dist', 'assets')
 console.log(srcDir, destDir)
 
 // To copy a folder or file
-fs.copy(srcDir, destDir, (err) => {
+fs.copy(srcDir, destDir, err => {
   if (err) return console.error(err)
   console.log('success!')
 })

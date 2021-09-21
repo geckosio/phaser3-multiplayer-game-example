@@ -1,10 +1,12 @@
-const geckos = require('@geckos.io/server').default
-const { iceServers } = require('@geckos.io/server')
+import geckos from '@geckos.io/server'
+import { iceServers } from '@geckos.io/server'
 
-const { Scene } = require('phaser')
-const Player = require('./components/player')
+import pkg from 'phaser'
+const { Scene } = pkg
 
-class GameScene extends Scene {
+import { Player } from './components/player.js'
+
+export class GameScene extends Scene {
   constructor() {
     super({ key: 'GameScene' })
     this.playerId = 0
@@ -110,5 +112,3 @@ class GameScene extends Scene {
     }
   }
 }
-
-module.exports = GameScene

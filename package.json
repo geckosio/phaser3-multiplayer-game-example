@@ -2,6 +2,10 @@
   "name": "phaser3-multiplayer-example-with-geckos.io",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
+  "engines": {
+    "node": "^14.15 || >=16"
+  },
   "scripts": {
     "start": "npm run dev",
     "dev": "npm-run-all --parallel parcel:serve server:serve",
@@ -20,9 +24,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@geckos.io/client": "^2.0.0-dev.4",
+    "@geckos.io/client": "^2.0.0",
     "@geckos.io/phaser-on-nodejs": "^1.2.3",
-    "@geckos.io/server": "^2.0.0-dev.4",
+    "@geckos.io/server": "^2.0.0",
     "axios": "^0.21.1",
     "compression": "^1.7.4",
     "core-js": "^3.16.0",
