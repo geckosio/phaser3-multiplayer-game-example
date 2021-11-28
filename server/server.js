@@ -1,7 +1,6 @@
 import express from 'express'
 import http from 'http'
 import cors from 'cors'
-import compression from 'compression'
 import path from 'path'
 import { PhaserGame } from './game/game.js'
 
@@ -17,7 +16,6 @@ const game = new PhaserGame(server)
 const port = 1444
 
 app.use(cors())
-app.use(compression())
 
 app.use('/', express.static(path.join(__dirname, '../client')))
 

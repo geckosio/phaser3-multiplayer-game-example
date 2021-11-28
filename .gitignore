@@ -1,4 +1,5 @@
-.cache
-.parcel-cache
-dist
-node_modules
+/.cache
+/.parcel-cache
+/client/bundle.js
+/dist
+/node_modules
