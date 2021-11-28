@@ -1,9 +1,9 @@
 import { Scene } from 'phaser'
 import axios from 'axios'
-import Player from '../components/player'
-import Cursors from '../components/cursors'
-import Controls from '../components/controls'
-import FullscreenButton from '../components/fullscreenButton'
+import Player from '../components/player.js'
+import Cursors from '../components/cursors.js'
+import Controls from '../components/controls.js'
+import FullscreenButton from '../components/fullscreenButton.js'
 
 export default class GameScene extends Scene {
   constructor() {

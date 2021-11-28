@@ -8,15 +8,12 @@
   },
   "scripts": {
     "start": "npm run dev",
-    "dev": "npm-run-all --parallel parcel:serve server:serve",
+    "dev": "npm-run-all --parallel dev:*",
     "build": "npm run parcel:build",
     "play": "cross-env-shell NODE_ENV=production node server/server.js",
     "test": "node test/test.js",
-    "copy": "node copy.cjs",
-    "pm2:start": "cross-env-shell NODE_ENV=production pm2 start server/server.js --max-memory-restart 240M",
-    "parcel:build": "npm run copy && parcel build index.html --no-source-maps",
-    "parcel:serve": "npm run copy && parcel serve index.html --no-source-maps",
-    "server:serve": "nodemon --delay 500ms server/server.js",
+    "dev:webpack": "webpack -c webpack.config.cjs --watch",
+    "dev:nodemon": "nodemon --delay 500ms server/server.js",
     "format:check": "prettier --check {client,server}/**/*.js",
     "format": "prettier --write {client,server}/**/*.js"
   },
@@ -29,7 +26,6 @@
     "@geckos.io/server": "^2.0.0",
     "axios": "^0.21.1",
     "compression": "^1.7.4",
-    "core-js": "^3.16.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "phaser": "^3.55.2"
@@ -40,9 +36,9 @@
     "fs-extra": "^10.0.0",
     "nodemon": "^2.0.3",
     "npm-run-all": "^4.1.5",
-    "parcel": "^2.0.0-beta.3.1",
-    "parcel-plugin-static-files-copy": "^2.4.3",
-    "puppeteer": "^2.1.1"
+    "puppeteer": "^2.1.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
   },
   "staticFiles": {
     "staticPath": [
