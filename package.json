@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "@geckos.io/client": "^2.1.3",
-    "@geckos.io/phaser-on-nodejs": "^1.2.3",
+    "@geckos.io/phaser-on-nodejs": "^1.2.8",
     "@geckos.io/server": "^2.1.3",
     "axios": "^0.21.1",
     "cors": "^2.8.5",
