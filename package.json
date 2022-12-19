@@ -9,7 +9,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "npm-run-all --parallel dev:*",
-    "build": "npm run parcel:build",
+    "build": "webpack -c webpack.config.cjs",
     "play": "cross-env-shell NODE_ENV=production node server/server.js",
     "test": "node test/test.js",
     "dev:webpack": "webpack -c webpack.config.cjs --watch",
