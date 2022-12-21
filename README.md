@@ -8,7 +8,7 @@ To clone and run this game, you'll need [Git](https://git-scm.com) and [Node.js]
 
 ```bash
 # Clone this repository
-$ git clone --depth 1 https://github.com/geckosio/phaser3-multiplayer-game-example.git phaser3-multiplayer-game
+$ npx gitget https://github.com/geckosio/phaser3-multiplayer-game-example phaser3-multiplayer-game
 
 # Go into the repository
 $ cd phaser3-multiplayer-game
